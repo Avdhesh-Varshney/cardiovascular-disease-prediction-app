@@ -1,0 +1,45 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 700px;
+  background-color: #1e1e1e;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: rgb(255, 75, 75);
+  text-align: center;
+}
+
+.form-label {
+  color: #61dafb;
+  margin-right: 1rem;
+}
+
+.form-control {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.btn-primary {
+  background-color: rgb(255, 75, 75);
+  color: #ffffff;
+  border: none;
+}
+
+#prediction {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
