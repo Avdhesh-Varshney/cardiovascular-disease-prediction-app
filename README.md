@@ -1,192 +1,184 @@
-<h1 align='center'>💥 Cardio Vascular Disease Prediction ML Model 💥</h1>
-
-<h3>:zap: GOAL</h3>
-
-- The aim of the project is to analyze and predict whether the person having the chances of CVD.
-
-### :zap: **DATASET** 
-
-- https://www.kaggle.com/datasets/alphiree/cardiovascular-diseases-risk-prediction-dataset
-
-
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
-
-
-<div align='center'>
-
-### :zap: **TECH STACK USED**
-
-<a href="https://jupyter.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white" alt="jupyter-notebook" /> </a>
-<a href="https://https://numpy.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy" /> </a>
-<a href="https://pandas.pydata.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" /> </a>
-<a href="https://matplotlib.org/" rel="noreferrer"> <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="matplotlib" /> </a>
-<a href="https://scikit-learn.org/stable/" rel="noreferrer"> <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" /> </a>
-<a href="https://flask.palletsprojects.com/en/3.0.x/" rel="noreferrer"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="flask" /> </a>
-<a href="https://www.w3schools.com/html/" rel="noreferrer"> <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="html5" /> </a>
-<a href="https://www.w3schools.com/css/" rel="noreferrer"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="css3" /> </a>
-<a href="https://www.w3schools.com/js/" rel="noreferrer"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="js" /> </a>
-<a href="https://console.cloud.google.com/welcome?project=superb-tendril-373416" rel="noreferrer"> <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="google-cloud" /> </a>
-
-</div>
-
-### :zap: **DESCRIPTION**
-
-To analyze the dataset of the Cardio Vascular Disease Risk Prediction Dataset and build and train the model on the basis of different features and variables.
-
-There are 19 features and 308854 entries in this dataset.
-
-- **`General_Health`** - Would you say that in general your health is?
-- **`Checkup`** - About how long has it been since you last visited a doctor for a routine checkup?
-- **`Exercise`** - During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?
-- **`Heart_Disease`** - Respondents that reported having coronary heart disease or mycardialinfarction
-- **`Skin_Cancer`** - Respondents that reported having skin cancer
-- **`Other_Cancer`** - Respondents that reported having any other types of cancer
-- **`Depression`** - Respondents that reported having a depressive disorder (including depression, major depression, dysthymia, or minor depression)
-- **`Diabetes`** - Respondents that reported having a diabetes. If yes, what type of diabetes it is/was.
-- **`Arthritis`** - Respondents that reported having an Arthritis
-- **`Sex`** - Respondent's Gender
-
-
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
-
-
-
-### :zap: **LIBRARIES NEEDED**
-
-1. Pandas
-2. Numpy
-3. Matplotlib
-4. Sklearn
-5. Sci-py
-6. Seaborn
-7. Joblib
-8. Flask
-
-
-### :zap: **HOW TO USE IT**
-
-* Create a virtual environment using `python -m venv myenv`.
-* To activate the virtual environment use `.\myenv\Scripts\activate`.
-* If error occurs, use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
-* Now, app.py is the flask app code. run the command `pip install -r requirements.txt` to install the required dependencies for the flask app.
-* You may need to install additional libraries for running the jupyter notebooks.
-
-
-### :zap: **WHAT I HAVE DONE**
-
-* Load the dataset which contains 308854 entries in it and having 19 features in it.
-* Performing EDA on the dataset to get insights of the dataset.
-* Plotting different features graphs correspond to `target` feature and performing **univariate** and **bivariate** analysis.
-* Analyse the dataset by using correlation and plot the bar plot i.e., how much it is related to `target` feature.
-* Reduce the parameters and split the dataset into input and target features.
-* Split the parameters into training and testing sets.
-* Train the different models and get their accuracies and MSE & R2 scores even after tuning the hyper-parameters.
-* Even build a neural network and tune the parameters of their, but Neural network gives 91.91% accuracy.
-* Dump the model into `.joblib` extension file and create a front-end for it.
-* Also creating a `requirements.txt` file for the model and website build-up.
-* Create a front-end using **FLASK** framework and create a user-friendly template.
-* Website can takes input and pass to the backend of the model and model will predict and provide the user a best result as of accuracy is around ***91.91%***.
-
-
-
-### :zap: **Visualization and EDA of different attributes**
-
-<table align='center'>
-  <tr align='center'>
-    <td align='center'>Alcohol Consumption</td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/Alcohol_Consumption_distribution.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/Alcohol_Consumption_bivariant_distribution.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>Body Mass Index</td>
-    <td align='center'>
-      <img alt="heatmap" src="/static/images/BMI_distribution.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/BMI_bivariant_distribution.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>Fried Patato Consumption</td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/FriedPotato_Consumption_distribution.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/FriedPotato_Consumption_bivariant_distribution.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>Fruit Consumption</td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/Fruit_Consumption_distribution.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/Fruit_Consumption_bivariant_distribution.png" >
-    </td>
-  </tr>
-
-  <tr align='center'>
-    <td align='center'>Correlation</td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/target_correlation.png" >
-    </td>
-    <td align='center'>
-      <img alt="graph" src="/static/images/correlation_heatmap.png" >
-    </td>
-  </tr>
-</table>
-
-
-### :zap: **CONCLUSION**
-
-- Neural Network model show promising performance with **91.91%** accuracy of the model.
-- Created a user-friendly front-end framework using **FLASK** and integrate it to the model.
-
-#### :zap: **Outputs**
-
-<table align='center'>
-  <tr align='center'>
-    <td align='center'>
-      <img alt='Fraud' src='/static/images/characteristic_curve.png' >
-    </td>
-  </tr>
-</table>
-
-
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+<h1 align="center">💥 CVD Risk Prediction Model 💥</h1>
 
 <div align="center">
-
-### :zap: **PROJECT CREATOR & ADMIN**
-
-  <table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Avdhesh-Varshney">
-        <img src="https://github.com/Avdhesh-Varshney/CPMasterLog/assets/114330097/0b13fac7-e59d-40be-ac14-b76a28174e85" width=185px height=175px />
-      </a></br> 
-      <h4 style="color:red;"><a href="https://github.com/Avdhesh-Varshney">Avdhesh Varshney</a></h4>
-      <a href="https://www.linkedin.com/in/avdhesh-varshney-5314a4233/">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      </a>
-  </tr>
-  </table>
+   <strong>An end-to-end Cardiovascular Disease (CVD) Risk Prediction model, built with Machine Learning, and deployed using Flask and Streamlit.</strong>
 </div>
 
+<br>
 
-![Line](https://github.com/Avdhesh-Varshney/WebMasterLog/assets/114330097/4b78510f-a941-45f8-a9d5-80ed0705e847)
+## 🚀 **Project Overview**
+
+This project aims to predict **Cardiovascular Disease (CVD) Risk** based on a set of health-related features. It utilizes both Machine Learning and Deep Learning algorithms to provide accurate predictions, with a neural network model achieving an impressive accuracy of **91.92%**. The project includes a front-end web application built using Flask and deployed on **Streamlit** for broader accessibility.
+
+---
+
+## 🌟 **Key Highlights**
+
+- **Exploratory Data Analysis (EDA):** Comprehensive analysis of features and their relationships to identify critical insights.
+- **Model Development:** Implementation of various machine learning models, including a **Neural Network**, with performance tuning for optimized results.
+- **Deployment:** End-to-end deployment using **Flask** and **Streamlit**, with a fully functional web interface for users to input their health data and receive predictions.
+- **Real-time Predictions:** Users can input real-time health data and receive immediate predictions for their cardiovascular risk.
+
+---
+
+## 📊 **Features of the Project**
+
+### 1. **Exploratory Data Analysis (EDA)**
+
+- Conducted **univariate** and **bivariate** analysis to understand the distribution of features and their correlations with the target.
+- Used **correlation heatmaps** to assess the relationships between different variables.
+
+### 2. **Feature Engineering and Preprocessing**
+
+- Reduced and selected the most important features based on correlation analysis and domain knowledge.
+- Split the dataset into **training** and **testing** sets for model evaluation.
+
+### 3. **Model Training and Performance**
+
+- Trained multiple models, including **Neural Networks**, **Logistic Regression**, and **Decision Trees**.
+- Achieved a **91.92% accuracy** with the Neural Network model, validated through metrics like **Mean Squared Error (MSE)** and **R² score**.
+- Hyperparameter tuning was performed for further optimization.
+
+### 4. **Web Application and Deployment**
+
+- Integrated the model into a **Flask** web application with a clean, user-friendly interface.
+- Deployed on **Streamlit** for cloud-based access, allowing users to input health data and get real-time risk predictions.
+
+---
+
+## ⚙️ **How to Use the Project**
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-github-username/cardiovascular-disease-prediction-app.git
+```
+
+### 2. Set Up a Virtual Environment
+
+```bash
+python -m venv myenv
+```
+
+### 3. Activate the Virtual Environment
+
+- **Windows:**
+
+```bash
+.\myenv\Scripts\activate
+```
+
+- **Linux/MacOS:**
+
+```bash
+source myenv/bin/activate
+```
+
+### 4. Install Required Libraries
+
+Install all necessary libraries listed in `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Running the Flask Application
+
+- To run the Flask-based app locally, use the command:
+
+```bash
+python flask_app.py
+```
+
+### 6. Running the Streamlit Application
+
+- Run the Streamlit app using the following command:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+> [Streamlit CVD Risk Prediction App](https://cvd-risk-prediction-app.streamlit.app/)
+
+---
+
+## 📈 **Exploratory Data Analysis**
+
+### **Univariate Analysis**
+Single feature analysis to visualize individual data distributions.
+
+![Age Distribution](./static/images/univariate_analysis/univariate_Age_Category_distribution.png)
+![Alcohol Consumption](./static/images/univariate_analysis/univariate_Alcohol_Consumption_distribution.png)
+
+### **Bivariate Analysis**
+Analyzing relationships between features and the target variable.
+
+![Bivariate Age vs Target](./static/images/bivariate_analysis/bivariate_Age_Category_distribution.png)
+![Bivariate Alcohol vs Target](./static/images/bivariate_analysis/bivariate_Alcohol_Consumption_distribution.png)
+
+### **Correlation Analysis**
+Explore relationships between variables to identify key contributors to cardiovascular risk.
+
+![Correlation Heatmap](./static/images/correlation_heatmap.png)
+
+---
+
+## 🧠 **Model Performance and Deployment**
+
+- **Model Accuracy:** The Neural Network model achieved **91.92% accuracy**, demonstrating its reliability in predicting cardiovascular disease risk.
+- **Real-time Web Interface:** The web application, deployed using **Flask**, allows users to input their health parameters and instantly receive predictions on their cardiovascular risk.
+- **Streamlit Deployment:** The application has also been deployed on Streamlit for easy, cloud-based access.
+
+> [Streamlit CVD Risk Prediction App](https://cvd-risk-prediction-app.streamlit.app/)
+
+### **Model Performance Metrics:**
+
+- **Accuracy:** 91.92%
+
+![Model Accuracy](./static/images/characteristic_curve.png)
+
+---
+
+## 🛠 **Technologies Used**
+
+- **Python:**  
+  Libraries: `scikit-learn`, `TensorFlow`, `Pandas`, `Matplotlib`, `Seaborn`, `joblib`
+- **Flask:**  
+  Framework for creating the web app interface.
+- **Streamlit:**  
+  For cloud-based app deployment.
+- **Jupyter Notebooks:**  
+  For conducting Exploratory Data Analysis (EDA) and model development.
+
+---
+
+## 🎯 **Conclusion**
+
+The **CVD Risk Prediction Model** demonstrates high accuracy and practical applicability. With its **91.92% accuracy**, it can serve as a valuable tool for health professionals and individuals alike. The streamlined front-end design, built using Flask and deployed on Streamlit, ensures ease of use for non-technical users to assess their cardiovascular risk based on health data.
+
+---
+
+## 📸 **Project Screenshots**
+
+### **Power BI Dashboard**
+
+![Power BI Dashboard](./static/images/power_bi_dashboard.png)
+
+### **Flask Application Screenshots**
+
+![Flask App](./static/images/flask_app/flask_0.jpeg)
+![Flask App](./static/images/flask_app/flask_1.jpeg)
+![Flask App](./static/images/flask_app/flask_2.jpeg)
+
+### **Streamlit Application Screenshots**
+
+![Streamlit App](./static/images/streamlit_app/streamlit_0.jpeg)
+![Streamlit App](./static/images/streamlit_app/streamlit_1.jpeg)
+
+---
 
 <div align="center">
-  <h3>Show some &nbsp;❤️&nbsp; by &nbsp;🌟&nbsp; this repository!</h3>
-  <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> :)</em>
+  <h3>Show some ❤️ by 🌟 starring this repository!</h3>
 </div>
 
 <a href="#top"><img src="https://img.shields.io/badge/-Back%20to%20Top-red?style=for-the-badge" align="right"/></a>
-
