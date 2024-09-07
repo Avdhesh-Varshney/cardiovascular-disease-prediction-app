@@ -122,7 +122,7 @@ function createSlider(labelText, elementId, type, minValue, maxValue) {
   } else {
     sliderElement.setAttribute('step', '0.1');
   }
-  sliderElement.setAttribute('value', (maxValue - minValue) / 2 + 1);
+  sliderElement.setAttribute('value', minValue);
   sliderElement.classList.add('form-range');
 
   const valueDisplay = document.createElement('span');
@@ -145,7 +145,7 @@ function createSlider(labelText, elementId, type, minValue, maxValue) {
 // Function to create button dynamically
 function createButton(labelText) {
   const formElement = document.createElement('button');
-  formElement.classList.add('btn', 'btn-primary');
+  formElement.classList.add('btn', 'btn-danger');
   formElement.textContent = labelText;
   formElement.addEventListener('click', function (event) {
     if (!isFormValid()) {
@@ -176,7 +176,28 @@ function isFormValid() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-form.appendChild(createFormInput('Your Name', 'name', "Enter your name"));
+form.appendChild(createFormInput('Enter your name:', 'name', ""));
+
+form.appendChild(createFormElement('In what age category do you belong?', 'select', 'age_category', [
+  { value: 0, label: '18-24' },
+  { value: 1, label: '25-29' },
+  { value: 2, label: '30-34' },
+  { value: 3, label: '35-39' },
+  { value: 4, label: '40-44' },
+  { value: 5, label: '45-49' },
+  { value: 6, label: '50-54' },
+  { value: 7, label: '55-59' },
+  { value: 8, label: '60-64' },
+  { value: 9, label: '65-69' },
+  { value: 10, label: '70-74' },
+  { value: 11, label: '75-79' },
+  { value: 12, label: '80+' },
+]));
+
+form.appendChild(createRadioButtons('Sex', 'sex', [1, 0], 'Male', 'Female'));
+form.appendChild(createFormInput('Height (in cm)', 'height', ''));
+form.appendChild(createFormInput('Weight (in kg)', 'weight', ''));
+form.appendChild(createRadioButtons('Have you smoked at least 100 cigarettes in your entire life?', 'smoking_history', [1, 0], 'Yes', 'No'));
 
 form.appendChild(createFormElement('General Health', 'select', 'general_health', [
   { value: 3, label: 'Poor' },
@@ -194,11 +215,6 @@ form.appendChild(createFormElement('Checkup', 'select', 'checkup', [
   { value: 0, label: '5 or more years ago' },
 ]));
 
-form.appendChild(createRadioButtons('Exercise', 'exercise', [1, 0], 'Yes', 'No'));
-form.appendChild(createRadioButtons('Skin Cancer', 'skin_cancer', [1, 0], 'Yes', 'No'));
-form.appendChild(createRadioButtons('Other Cancer', 'other_cancer', [1, 0], 'Yes', 'No'));
-form.appendChild(createRadioButtons('Depression', 'depression', [1, 0], 'Yes', 'No'));
-
 form.appendChild(createFormElement('Diabetes', 'select', 'diabetes', [
   { value: 0, label: 'No' },
   { value: 1, label: 'No, pre-diabetes or borderline diabetes' },
@@ -206,20 +222,14 @@ form.appendChild(createFormElement('Diabetes', 'select', 'diabetes', [
   { value: 3, label: 'Yes, but female told only during pregnancy' },
 ]));
 
+form.appendChild(createRadioButtons('During the past month, other than your regular job, did you participate in any physical activities or exercises such as running, calisthenics, golf, gardening, or walking for exercise?', 'exercise', [1, 0], 'Yes', 'No'));
+form.appendChild(createRadioButtons('Skin Cancer', 'skin_cancer', [1, 0], 'Yes', 'No'));
+form.appendChild(createRadioButtons('Other Cancer', 'other_cancer', [1, 0], 'Yes', 'No'));
+form.appendChild(createRadioButtons('Depression', 'depression', [1, 0], 'Yes', 'No'));
 form.appendChild(createRadioButtons('Arthritis', 'arthritis', [1, 0], 'Yes', 'No'));
-form.appendChild(createRadioButtons('Gender', 'sex', [1, 0], 'Male', 'Female'));
-
-form.appendChild(createSlider('Your Age', 'age_category', 'int', 18, 120));
-
-form.appendChild(createFormInput('Height (in cm)', 'height', 'Enter the value of Height in cm'));
-form.appendChild(createFormInput('Weight (in kg)', 'weight', 'Enter the value of Weight in kg'));
-
-form.appendChild(createRadioButtons('Smoking History', 'smoking_history', [1, 0], 'Yes', 'No'));
-
-form.appendChild(createSlider('Alcohol Consumption', 'alcohol_consumption', 'float', 0, 30));
-form.appendChild(createSlider('Fruit Consumption', 'fruit_consumption', 'float', 0, 120));
-form.appendChild(createSlider('Green Vegetables Consumption', 'green_vegetables_consumption', 'float', 0, 128));
-form.appendChild(createSlider('Fried Potato Consumption', 'fried_potato_consumption', 'float', 0, 128));
+form.appendChild(createSlider('During the past 30 days, how many days did you have at least one drink of any alcoholic beverage such as beer, wine, a malt beverage or liquor?', 'alcohol_consumption', 'float', 0, 30));
+form.appendChild(createSlider('Not including juices, how often did you eat fruit?', 'fruit_consumption', 'float', 0, 120));
+form.appendChild(createSlider('How often did you eat a green leafy or lettuce salad, with or without other vegetables?', 'green_vegetables_consumption', 'float', 0, 128));
+form.appendChild(createSlider('How often did you eat any kind of fried potatoes, including French fries, home fries, or hash browns?', 'fried_potato_consumption', 'float', 0, 128));
 
 form.appendChild(createButton('Predict'));
-
